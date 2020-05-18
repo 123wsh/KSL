@@ -234,7 +234,8 @@ export default {
       this.logindisplay = true;
     },
     zhuxiao() {
-      this.isLogin = false;
+     let a=confirm("确定要注销吗？")
+      a?this.isLogin=false:"";
     },
     dozhuce() {
       this.zhuce = true;
