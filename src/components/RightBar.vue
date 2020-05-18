@@ -3,7 +3,7 @@
         <ul class="ul01">
             <li>
                 <div class="sousuo">
-                     <img :src="imgsousuo" @mouseover="change()" @mouseout="change1()">
+                     <img src="../assets/image/header/sousuo_white.png" >
                     <input type="text" placeholder="输入搜索内容按Enter确定" >
                 </div>
             </li>
@@ -78,7 +78,7 @@ export default {
 
 
 
-<style scoped>
+<style >
 * {
   margin: 0;
   padding: 0;
@@ -129,8 +129,8 @@ export default {
     position: relative;
     top:-30px;
     background-color:#000;
-    width: 53px;
-    height: 18px;
+    width: 77px;
+    height: 35px;
     padding: 10px;
     padding-left: 15px;
     transition:right .3s linear;
@@ -157,17 +157,16 @@ export default {
     color: #fff;
     font-size: 6px;
     position: absolute;
-    top:820px;
+    top:810px;
     right: -77px;
     background-color:#000;
     width: 53px;
-    height: 18px;
     padding: 10px;
     padding-left: 15px;
     transition:right .3s linear;
 }
 .d5{
-    top:890px
+    top:870px !important;
 }
 .l1>div{
     text-align: center;

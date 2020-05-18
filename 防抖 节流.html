@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <input type="text" v-model:value="keywords" @keyup.13="search">
+  <button @click="search">搜索</button>
+</div>
+<script>
+var vm=new Vue({
+  el:"#app",
+  data:{
+    keywords:"",
+    // timer:null,//防抖
+    cansend:true,//节流
+  },
+  methods:{
+    //防抖
+    // search(){
+    //   clearTimeout(this.timer);
+    //   this.timer=setTimeout(() => {
+    //     if(this.keywords.trim()!==""){
+    //       console.log(this.keywords)
+    //     }
+    //   },300);
+    // }
+    //节流
+    search(){
+      if(this.cansend==true){
+        this.cansend=false;
+          if(this.keywords.trim()!==""){
+            console.log(this.keywords);
+          }
+         setTimeout(() => {
+          this.cansend=true;
+         },1000);
+      }
+    }
+  },
+  watch:{
+    keywords(){
+      this.search()
+    }
+  }
+})
+</script>
+</body>
+</html>

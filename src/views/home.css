@@ -1,0 +1,201 @@
+
+.img01 {
+  height: 600px;
+}
+.daziti {
+  text-align: center;
+  font-size: 30px;
+  color: #000000;
+  margin: 40px 0px;
+}
+.d55 {
+  display: flex;
+  padding-left: 320px;
+}
+.sangetu {
+  margin: 0px 20px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  width: 380px;
+  height: 280px;
+}
+.sangetu > div {
+  position: absolute;
+}
+.dd1 {
+  top: 110px;
+  left: 125px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  z-index: 999;
+}
+.dd2 {
+  top: 150px;
+  left: 142px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 0.5rem;
+  padding: 8px 22px;
+  z-index: 999;
+}
+.sangetu:hover > .dd2 {
+  background-color: #fff;
+  color: #000000;
+}
+.sangetu > img {
+  overflow: hidden;
+  transition: 0.6s;
+}
+.sangetu:hover > img {
+  transform: scale(1.1);
+}
+.d6 {
+  width: 1200px;
+  margin-left: 350px;
+}
+.d6 > img {
+  width: 1200px;
+  margin: 0 auto;
+}
+.d7 {
+  width: 1200px;
+  height: 534px;
+  margin: 20px auto;
+  display: flex;
+}
+.d71 > img {
+  width: 441px;
+  height: 504px;
+  transition: 0.6s;
+}
+.d71:hover > img {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.d72 {
+  display: flex;
+  margin: 20px 30px;
+  position: relative;
+}
+.d72 img {
+  width: 250px;
+}
+.xiaosan1,
+.xiaosan2,
+.xiaosan3 {
+  position: relative;
+}
+.xiao1,
+.xiao2,
+.xiao3,
+.xiao4 {
+  position: absolute;
+  left: 80px;
+  cursor: pointer;
+}
+.xiao1 {
+  top: 260px;
+  font-size: 18px;
+  color: #8677b3;
+  font-weight: bold;
+  left: 68px;
+}
+.xiao2 {
+  top: 290px;
+  font-size: 14px;
+}
+.xiao3 {
+  top: 310px;
+  font-size: 14px;
+  left: 90px;
+}
+.xiao4 {
+  top: 360px;
+  color: #333333;
+  font-size: 12px;
+  border: 1px solid #000000;
+  padding: 10px 20px;
+  transition-property: color background-color;
+  transition-duration: 0.6s;
+}
+.xiaosan1:hover > .xiao1 {
+  color: #f3ae00;
+}
+.xiaosan2:hover > .xiao1 {
+  color: #f3ae00;
+}
+.xiaosan3:hover > .xiao1 {
+  color: #f3ae00;
+}
+
+.d72 img {
+  transition: 0.5s;
+}
+.xiaosan1:hover > img {
+  transform: scale(1.1);
+}
+.xiaosan2:hover > img {
+  transform: scale(1.1);
+}
+.xiaosan3:hover > img {
+  transform: scale(1.1);
+}
+.xiaosan1:hover > .xiao4 {
+  color: #fff;
+  background-color: #000;
+}
+.xiaosan2:hover > .xiao4 {
+  color: #fff;
+  background-color: #000;
+}
+.xiaosan3:hover > .xiao4 {
+  color: #fff;
+  background-color: #000;
+}
+.d8 {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.d81 {
+  margin: 10px;
+  overflow: hidden;
+  width: 593px;
+  height: 369px;
+  position: relative;
+}
+.d82 {
+  margin: 10px;
+  overflow: hidden;
+  width: 593px;
+  height: 369px;
+  position: relative;
+}
+.d81 > div,
+.d82 > div {
+  position: absolute;
+  top: 310px;
+  background-color: #eee;
+  width: 590px;
+  height: 30px;
+  line-height: 30px;
+  padding: 5px;
+  font-size: 14px;
+  color: #333333;
+}
+.d81 > div > span:nth-child(2),
+.d82 > div > span:nth-child(2) {
+  padding-left: 450px;
+}
+.d81 > img,
+.d82 > img {
+  width: 100%;
+  transition: 0.6s;
+}
+.d81:hover > img,
+.d82:hover > img {
+  transform: scale(1.1);
+}

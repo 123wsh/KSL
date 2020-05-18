@@ -16,7 +16,7 @@ Vue.component("right-bar",RightBar)
 import FooterBar from  "./components/Footer.vue"
 Vue.component("footer-bar",FooterBar)
 
-axios.defaults.baseURL = 'http://127.0.0.1'
+axios.defaults.baseURL = 'http://127.0.0.1:4000'
 Vue.prototype.axios = axios;
 Vue.config.productionTip = false
 
