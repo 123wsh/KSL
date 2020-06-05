@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 //首页
 import Home from '../views/home.vue'
 
+import NotFound from '../views/NotFound.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -11,15 +13,24 @@ const routes = [
     name: 'Home',
     component: Home
   }
-  // ,
-
-//   {
-
-//     // route level code-splitting
-//     // this generates a separate chunk (about.[hash].js) for this route
-//     // which is lazy-loaded when the route is visited.
-//     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-//   }
+  ,
+  {
+    path: '/xshd/:canshu',
+    props:true,
+    component: () => import(/* webpackChunkName: "xshd" */
+      '../views/xshd.vue'
+    )
+  },
+  {
+    path: '/xxhd',
+    component: () => import(/* webpackChunkName: "xxhd" */
+      '../views/xxhd.vue'
+    )
+  },
+  {
+    path: '*',
+    component: NotFound
+  }
 ]
 
 const router = new VueRouter({

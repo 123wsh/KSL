@@ -25,14 +25,14 @@
         <div class="nav_ul">
           <ul>
             <li>
-              <a href="#">首页</a>
+              <a href="#" @click="toHome">首页</a>
             </li>
             <li>
               <a href="#">活动专题</a>
               <img src="../assets/image/header/19_05.png" />
               <ul>
                 <li>
-                  <a href>线上活动</a>
+                  <a href="javascript:;" @click="xshd">线上活动</a>
                 </li>
                 <li>
                   <a href>线下活动</a>
@@ -193,7 +193,7 @@
         <span>{{issame}}</span>
       </div>
       <div>
-        <input v-model="tongyi" type="checkbox" />我同意条款
+        <input type="checkbox" value="false" @click="tongyibtn" />我同意条款
       </div>
       <div>
         <button @click="register">注册</button>
@@ -206,7 +206,7 @@
 export default {
   data() {
     return {
-      isLogin: false,
+      isLogin:this.$store.state.isLogin,
       logindisplay: false,
       searchContent: "",
       autologin: "",
@@ -234,8 +234,9 @@ export default {
       this.logindisplay = true;
     },
     zhuxiao() {
-     let a=confirm("确定要注销吗？")
-      a?this.isLogin=false:"";
+      let a = confirm("确定要注销吗？");
+      a ? (sessionStorage.removeItem("isLogin")) : "";
+      location.reload()
     },
     dozhuce() {
       this.zhuce = true;
@@ -274,9 +275,13 @@ export default {
             if (code == 1) {
               alert("登录成功");
               this.logindisplay = false;
-              this.username = "";
-              this.password = "";
-              this.isLogin=true
+              sessionStorage.setItem("uname",res.data.result[0].uname);
+              sessionStorage.setItem("upwd",res.data.result[0].upwd);
+              sessionStorage.setItem("isLogin",true);
+              location.reload();
+            }else{
+              alert("用户名或者密码错误");
+              this.password=""
             }
           });
       } else {
@@ -285,6 +290,13 @@ export default {
         this.username = "";
         this.password = "";
       }
+    },
+    tongyibtn() {},
+    xshd() {
+      this.$router.push("/xshd/5");
+    },
+    toHome() {
+      this.$router.push("/");
     }
   },
   watch: {
@@ -332,7 +344,9 @@ export default {
       }
     }
   },
-  mounted() {}
+  mounted() {
+
+  }
 };
 </script>
   

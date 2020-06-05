@@ -1,12 +1,7 @@
 
 <template>
   <div>
-    <div>
-      <my-header></my-header>
-    </div>
-    <div>
-      <right-bar></right-bar>
-    </div>
+    
 
     <div class="div01">
       <div v-swiper:mySwiper="swiperOption">
@@ -112,9 +107,9 @@ export default {
     return {
       banners: [
         require("../assets/image/157537903021809.jpg"),
-        require("../assets/image/157537903021809.jpg"),
-        require("../assets/image/157537903021809.jpg"),
-        require("../assets/image/157537903021809.jpg")
+        require("../assets/image/timg1.jpg"),
+        require("../assets/image/timg2.jpg"),
+        require("../assets/image/timg.jpg"),
       ],
       swiperOption: {
         pagination: {
