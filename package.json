@@ -14,7 +14,7 @@
     "less-loader": "^6.1.0",
     "mint-ui": "^2.2.13",
     "qs": "^6.9.1",
-    "swiper": "^5.3.8",
+    "swiper": "^6.5.1",
     "vue": "^2.6.11",
     "vue-awesome-swiper": "^4.1.1",
     "vue-router": "^3.1.5",
